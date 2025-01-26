@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biography</title>
+    <link rel="stylesheet" href="/src/bio.css">
+</head>
+<body style="background-color: rgb(195, 130, 38);">
+    <style>
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #111;
+        }
+    </style>
+    <div id="navbar"></div>
+    <script>
+        fetch('/src/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+    <div class="container">
+        <h1>About Me</h1>
+        <img src="/images/IMG_1869 2.JPG" alt="Profile Picture" style="width: 400px; height: 700px;" class="center">
+        <p>
+            Hi, my name is Nicholas Farraj! I am a student at the University of Delaware, class of 2027, pursuing a Bachelor of Science degree in Computer Science.  
+        </p>
+        <p>
+            I enjoy making rap and indie rock music in my free time. I also love playing video games like any computer science major. I used to play basketball and baseball in high school, but now I just occsionally play pickup games with friends. I go to the gym 5 times a week and love staying active. I am also an aspiring chef... (I can make chicken and rice, lol).
+        </p>
+        <h2>Skills</h2>
+        <ul style="font-size: 20px;">
+            <li>Teamwork</li>
+            <li>HTML</li>
+            <li>JavaScript + TS</li>
+            <li>C</li>
+            <li>Making people laugh</li>
+        </ul>
+        <h2 style="text-align: center;">Contact</h2>
+        <p>Email: nicholas.farraj@gmail.com</p>
+        <p>Phone: 302-757-2618</p>
+    </div>
+</body>
+</html>

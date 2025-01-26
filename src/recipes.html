@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: antiquewhite;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/recipe.css">
+    <title>The Secret Recipe</title>
+</head>
+<body>
+    <style>
+    button:hover {
+        transform: scale(1.1);
+    }
+    </style>
+    <style>
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #111;
+        }
+    </style>
+    <div id="navbar"></div>
+    <script>
+        fetch('/src/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+    <br>
+    <h1 style="text-align: center;">This is my Favorite Recipe!</h1>
+    <ul class="list-group">
+        <li class="list-group-item">9 RED food coloring drops</li><br>
+        <li class="list-group-item">2 cups of flour</li><br>
+        <li class="list-group-item">4 tbsp WHITE chocolate chips</li><br>
+        <li class="list-group-item">3 BROWN eggs</li><br>
+        <li class="list-group-item">1 tbsp vanilla extract</li><br>
+        <li class="list-group-item">25 grams of sugar</li><br>
+        <li class="list-group-item">2 tbsp butter</li><br>
+        <li class="list-group-item">1 pinch of LOVE (•‿•)</li><br>
+    </ul>
+    <h2>Instructions:</h2>
+    <p style="font-size: 30px;">Pre-heat your oven to 425º. Prepare a baking sheet with parchment paper.
+        Mix all dry ingredients in a bowl. Mix wet ingredients in another. Combine all ingredients until clumps are gone. Wash your hands before you touch the dough.
+        Roll little 1 inch balls of your dough and place them on your baking sheet. Bake at 425º for 10 minutes or until golden brown. Enjoy your Secret Code Cookies!
+    </p>
+</body>
+</html>

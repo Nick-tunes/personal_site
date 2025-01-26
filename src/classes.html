@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+    <link rel="stylesheet" href="/src/classes.css">
+</head>
+<body>
+    <style>
+        p{
+            font-size: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #111;
+        }
+    </style>
+    <div id="navbar"></div>
+    <script>
+        fetch('/src/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+    <h1 class="classes">
+        These are the following classes I am taking this current semester along with some information about the course:<br>
+    </h1>
+    <br>
+    <h1 style="color: #d61313; margin-left: 70px; margin-right: 70px;" class="classes">Current Semester: Spring 2025</h1>
+    <br>
+    <h2 class="classes">Class 1: CISC 220 DATA STRUCTURES</h2>
+    <p class="classes">Description: Review of data type abstraction, recursion, arrays, stacks, queues, multiple stacks and linked lists. Emphasis on dynamic storage management, garbage collection, trees, graphs, tables, sorting and searching.
+    </p>
+    <br>
+    <h2 class="classes">Class 2: CISC 260 MACH ORGANZTN & ASSEMBLY LANG</h2>
+    <p class="classes">
+        Description: Introduction to the basics of machine organization. Programming tools and techniques at the machine and assembly levels. Assembly language programming and computer arithmetic techniques.
+    </p>
+    <br>
+    <h2 class="classes">Class 3: FINC 200 FUNDAMENTALS OF FINANCE</h2>
+    <p class="classes">
+        Description: Provides non-business majors with an overview of the role of finance within a business organization. Topics include financial statement analysis, time value of money, capital budgeting, valuation and the cost of capital.
+    </p>
+    <br>
+    <h2 class="classes">Class 4: MATH 205 STATISTICAL METHODS</h2>
+    <p class="classes">
+        Description: Descriptive statistics, graphical displays, sampling, variation, normal distribution, estimation, hypothesis testing, one-way analysis of variance, simple linear regression and goodness of fit. Laboratory covers use of statistical packages on mainframe and microcomputers.
+    </p>
+</body>
+</html>

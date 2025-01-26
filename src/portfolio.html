@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        button:hover {
+        transform: scale(1.1);
+    }
+    </style>
+</head>
+<body style="background-color:cadetblue;">
+    <style>
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #111;
+        }
+    </style>
+    <div id="navbar"></div>
+    <script>
+        fetch('/src/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+    <h1 style="text-align: center;">Select a project to view:</h1>
+    <a href="https://ud-f24-cisc181.github.io/final-project-phase-2-Nick-tunes/">
+        <button id="calculator" style="font-size: 30px; background-color: black; color: bisque;">Loan calculator</button>
+    </a>
+    <li style="font-size: 20px;">Description: This is a loan amortization calculator constructed with a framework, similar to React, called Webz.</li>
+
+</body>
+</html>

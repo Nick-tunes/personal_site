@@ -1,0 +1,20 @@
+button:hover {
+    transform: scale(1.1);
+}
+h2  {
+    color: #d61313;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+h2, p {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+body{
+    background-color: #dbc0c0;
+}
+ h2 .classes{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: #212529;
+}
