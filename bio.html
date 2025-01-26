@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biography</title>
-    <link rel="stylesheet" href="/src/bio.css">
+    <link rel="stylesheet" href="/bio.css">
 </head>
 <body style="background-color: rgb(195, 130, 38);">
     <style>
@@ -31,7 +31,7 @@
     </style>
     <div id="navbar"></div>
     <script>
-        fetch('/src/nav.html')
+        fetch('/nav.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar').innerHTML = data;
@@ -39,7 +39,7 @@
     </script>
     <div class="container">
         <h1>About Me</h1>
-        <img src="/images/IMG_1869 2.JPG" alt="Profile Picture" style="width: 400px; height: 700px;" class="center">
+        <img src="/IMG_1869 2.JPG" alt="Profile Picture" style="width: 400px; height: 700px;" class="center">
         <p>
             Hi, my name is Nicholas Farraj! I am a student at the University of Delaware, class of 2027, pursuing a Bachelor of Science degree in Computer Science.  
         </p>

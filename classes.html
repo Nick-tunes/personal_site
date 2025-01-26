@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classes</title>
-    <link rel="stylesheet" href="/src/classes.css">
+    <link rel="stylesheet" href="/classes.css">
 </head>
 <body>
     <style>
@@ -34,7 +34,7 @@
     </style>
     <div id="navbar"></div>
     <script>
-        fetch('/src/nav.html')
+        fetch('/nav.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar').innerHTML = data;
